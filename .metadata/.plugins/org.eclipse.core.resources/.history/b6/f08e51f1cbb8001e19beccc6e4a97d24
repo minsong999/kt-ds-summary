@@ -1,0 +1,44 @@
+package oop_exam;
+
+/**
+ * 교재 171번 문제
+ */
+public class ReturnMethodQuiz5 {
+	
+	public static char getAverageString(int sum) {
+		char AverageString = '';
+		
+		
+		return  AverageString
+	}
+	
+	public static int sum(int korScore, int engScore, int mathScore, int progScore) {
+		int sum = 0;
+		sum = korScore + engScore + mathScore + progScore;
+		return sum;
+	}
+	
+	public static int getAverage(int sum) {
+		int average = sum / 4;
+		return average;
+		
+	}
+	
+	public static void main(String[] args) {
+		int korScore = 90;
+		int engScore = 88;
+		int mathScore = 70;
+		int progScore = 80;
+		int sum = 0;
+		int average = 0;
+
+		/*
+		 * // 평균점수 95점 이상: A+     
+		 * // 평균점수 90점 이상: A     
+		 * // 평균점수 85점 이상: B+     
+		 * // 평균점수 80점 이상: B     
+		 * // 평균점수 70점 이상: C     
+		 * // 평균점수 70점 미만: F
+		 */
+	}
+}

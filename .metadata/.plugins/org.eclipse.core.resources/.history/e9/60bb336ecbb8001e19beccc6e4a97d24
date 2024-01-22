@@ -1,0 +1,19 @@
+package oop_exam;
+
+/**
+ * 교재 171번 문제
+ */
+public class ReturnMethodQuiz5 {
+	
+	
+	public static void main(String[] args) {
+		    int korScore = 90;
+		    int engScore = 88;
+		    int mathScore = 70;
+		    int progScore = 80;
+		    int sum = 0;
+		    int average = 0;
+
+		
+	}
+}

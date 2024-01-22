@@ -1,0 +1,14 @@
+package hello_java_world;
+
+public class ArtithmaticProblem1 {
+	public static void main(String[] args) {
+		int minutes = 5;
+		int seconds = 50;
+		int time = 0;
+		
+		//time = (minutes * 60) + seconds;
+		int minutesToSeconds = minutes * 60;
+		time = minutesToSeconds + seconds;
+		System.out.println(minutesToSeconds + seconds);
+	}
+}

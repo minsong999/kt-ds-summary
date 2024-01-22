@@ -1,0 +1,13 @@
+package oop_exam;
+
+public class Calculator {
+	
+	int korScore;
+	int engScore;
+	int mathScore;
+	int progScore;
+	
+	int sumScore;
+	int averageScore;
+	String grade;
+}

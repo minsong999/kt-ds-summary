@@ -1,0 +1,12 @@
+package hello_java_world;
+
+public class ArithmaticOperator {
+	/**
+	 * 실행을 위한 코드
+	 * public static void main(String[] args)
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+	}
+}

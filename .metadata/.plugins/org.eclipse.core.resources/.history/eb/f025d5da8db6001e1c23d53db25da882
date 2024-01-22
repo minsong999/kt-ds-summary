@@ -1,0 +1,9 @@
+package hello_java_world;
+
+public class MethodExample {
+
+	
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,9 @@
+package oop_exam;
+
+/**
+ * 동물을 표현
+ * 
+ */
+public class Animal {
+
+}

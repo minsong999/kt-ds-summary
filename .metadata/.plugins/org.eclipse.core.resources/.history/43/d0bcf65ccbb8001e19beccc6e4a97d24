@@ -1,0 +1,11 @@
+package oop_exam;
+
+/**
+ * 교재 171번 문제
+ */
+public class ReturnMethodQuiz5 {
+	
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,28 @@
+package hello_java_world;
+
+import java.util.Scanner;
+
+public class WhileExample {
+	public static void main(String[] args) {
+
+		int i = 0;
+
+		while (i < 10) {
+			System.out.println(++i);
+		}
+
+//		while(true) { //반복 조건이 true라서 무한반복
+//			System.out.println(++i);
+//		}
+
+		// ctrl + shift + o
+		Scanner keyboard = new Scanner(System.in);
+
+		while (true) {
+			System.out.println("숫자를 입력하세요.");
+			int value = keyboard.nextInt();
+
+		}
+
+	}
+}

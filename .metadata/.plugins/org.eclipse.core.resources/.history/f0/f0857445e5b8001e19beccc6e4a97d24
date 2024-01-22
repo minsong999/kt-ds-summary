@@ -1,0 +1,12 @@
+package oop_exam;
+
+public class Zoo {
+	
+	public static void main(String[] args) {
+		// Animal 타입의 변수(인스턴스)를 만들어 활용
+		Animal animal = new Animal();
+		animal.hello();
+		
+	}
+
+}

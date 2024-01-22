@@ -1,0 +1,11 @@
+package hello_java_world;
+
+public class MethodExample {
+	public int add() {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

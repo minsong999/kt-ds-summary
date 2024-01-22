@@ -1,0 +1,9 @@
+package oop_exam;
+
+public class Zoo {
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

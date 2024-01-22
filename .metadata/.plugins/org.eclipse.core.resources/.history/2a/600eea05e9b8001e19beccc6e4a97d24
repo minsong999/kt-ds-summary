@@ -1,0 +1,12 @@
+package oop_exam;
+
+public class ClassRoom {
+	public static void main(String[] args) {
+		Calculator 학생1 = new Calculator();
+		학생1.korScore=94;
+		학생1.engScore=94;
+		학생1.mathScore=94;
+		학생1.progScore=94;
+		
+	}
+}

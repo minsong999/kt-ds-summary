@@ -1,0 +1,25 @@
+package oop_exam;
+
+public class Calculator {
+	
+	int korScore;
+	int engScore;
+	int mathScore;
+	int progScore;
+	
+	int sumScore;
+	int averageScore;
+	String grade;
+	
+	public int getSumScore() {
+		sumScore = korScore + engScore + mathScore + progScore;
+		return sumScore;
+	}
+	
+	public int getAverageScore() {
+		
+		return 0;
+	}
+	
+	
+}

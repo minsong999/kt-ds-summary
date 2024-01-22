@@ -1,0 +1,7 @@
+package hello_java_world;
+
+public class ArithmaticOperator {
+	public static void main(String[args]) {
+		
+	}
+}

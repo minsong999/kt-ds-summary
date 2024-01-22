@@ -1,0 +1,42 @@
+package oop_exam;
+
+public class Calculator {
+	
+	int korScore;
+	int engScore;
+	int mathScore;
+	int progScore;
+	
+	int sumScore;
+	int averageScore;
+	String grade;
+	
+	public int getSumScore() {
+		sumScore = korScore + engScore + mathScore + progScore;
+		return sumScore;
+	}
+	
+	public int getAverageScore() {
+		averageScore = sumScore / 4;
+		return averageScore;
+	}
+	
+	public String getGrade() {
+		if(averageScore >= 95) {
+			
+		}else if(averageScore >= 90) {
+			
+		}else if(averageScore >= 85) {
+			
+		}else if(averageScore >= 80) {
+			
+		}else if(averageScore >= 75) {
+			
+		}else {
+			
+		}
+		return grade;
+	}
+	
+	
+}

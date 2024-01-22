@@ -1,0 +1,18 @@
+package oop_exam;
+
+/**
+ * 교재 171번 문제
+ */
+public class ReturnMethodQuiz4 {
+
+	public static void main(String[] args) {
+		int money = 0;
+		
+		int father = 40;
+		int mother = 36;
+		int daughter =11;
+		
+		int adultOneWayFlightFare = 300_000;
+		int kidOneWayFlightFare = 120_000;
+	}
+}
