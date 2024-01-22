@@ -15,5 +15,13 @@ public class ClassRoom {
 		System.out.println(sum1);
 		System.out.println(average);
 		System.out.println(grade1);
+		
+		System.out.println(학생1);
+		Calculator 학생2 = 학생1;
+		System.out.println(학생2);
+		
+		학생2.korScore =0;
+		System.out.println(학생1.korScore);
+		
 	}
 }

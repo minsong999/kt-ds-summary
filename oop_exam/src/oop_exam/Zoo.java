@@ -19,6 +19,8 @@ public class Zoo {
 		Animal 렛서팬더 = new Animal();
 		렛서팬더.name = "푸바오친구";
 		렛서팬더.hello();
+		
+		
 	}
 
 }
