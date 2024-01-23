@@ -14,7 +14,6 @@ public class CallStudent {
 		double courseCredit =student.getCourseCredit();
 		String abcde = student.getABCED();
 		
-		
 		System.out.println("합계: " +sum);
 		System.out.println("평균: " +average);
 		System.out.println("학점: " +courseCredit);
