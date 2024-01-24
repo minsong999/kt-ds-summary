@@ -23,7 +23,7 @@ public class Student {
 	 * @return (평균 점수 - 55) / 10
 	 */
 	public double getCourseCredit() {
-
+				  
 		int CourseCredit = (int) ((getAverage() - 55) / 10 * 100);
 		return CourseCredit / 100.0;
 	}

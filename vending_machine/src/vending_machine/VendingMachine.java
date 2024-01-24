@@ -6,19 +6,52 @@ package vending_machine;
 public class VendingMachine {
 	// 상수 자리
 //	final int PRICE = 1300;
+	
+	//클래스 상수(공용 상수)
+		/**
+		 * 한번에 구매 할 수 있는 제품의 수
+		 */
+		public static final int PRODUCT_COUNT;
+		public static final String MACHINE_NAME;
+	
+	//클래스 상수에 값을 할당하는 방법
+	//static block
+	static {
+		// static 변수 / 상수의 값을 초기화 하는 공간.
+		PRODUCT_COUNT = 2;
+		MACHINE_NAME="자판기";
+	}
 
 	// 멤버변수 자리
 	/**
 	 * 상품 수량
 	 */
 //	int productQuantity;
-	Product product;
+	private Product product;
 
 	/**
 	 * 돈
 	 */
-	int money;
+	private int money;
 
+	//getter
+	public Product getProduct() {
+		return this.product;
+	}
+	
+	public int getMoney() {
+		return this.money;
+	}
+	
+	//setter
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+	
+	public void setMoney(int money) {
+		this.money = money;
+	}
+	
 	/**
 	 * 돈을 넣는다.
 	 * 
@@ -26,8 +59,8 @@ public class VendingMachine {
 	 */
 	public void insertMoney(Customer customer) {
 		
-		this.money += this.product.price;
-		customer.pay(this.product.price);
+		this.money += this.product.getPrice();
+		customer.pay(this.product.getPrice());
 	}
 
 	// 생성자 자리.
@@ -38,9 +71,9 @@ public class VendingMachine {
 		System.out.println("자판기 인스턴스를 만들었습니다.");
 		// 생성자가 만들어준 인스턴스의 멤버변수에 값을 할당한다.(초기화)
 		this.product = new Product();
-		this.product.name = "제로펩시";
-		this.product.price = 1300;
-		this.product.quantity = 10;
+		this.product.setName("제로펩시"); 
+		this.product.setPrice(1300);
+		this.product.setQuantity(0);
 
 		this.money = 100_000;
 
@@ -57,11 +90,10 @@ public class VendingMachine {
 	 * @param customer 버튼을 누른 고객
 	 */
 	public void pressButton(Customer customer) {
-		if (this.product.quantity <= 0) {
+		if (this.product.getQuantity() <= 0) {
 			return; // 메소드 즉시 종료
 		}
-		this.product.quantity--;
-		customer.addStock(this.product.name, this.product.price);
+		this.product.setQuantity(this.product.getQuantity() - 1);
+		customer.addStock(this.product.getName(), this.product.getPrice());
 	}
-
 }

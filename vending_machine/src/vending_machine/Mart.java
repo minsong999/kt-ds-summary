@@ -13,12 +13,12 @@ public class Mart {
 
 //		drinkMachine.money = 3000;
 //		drinkMachine.product.quantity = 5;
-		musk.wallet = 10_000;
+		musk.setWallet(10_000);
 //		musk.stock = 0;
 
 		// 고객이 자판기에 돈을 넣는다.
 		// 고객이 가진 돈을 빼주고 자판기의 돈을 증가시킨다.
-		musk.pay(drinkMachine.product.price);
+		musk.pay(drinkMachine.getProduct().getPrice());
 
 		// 자판기의 돈을 증가시킨다.
 //		drinkMachine.insertMoney();
@@ -29,10 +29,10 @@ public class Mart {
 		// 고객의 상품 수량 증가
 		musk.addStock("", 0);
 
-		System.out.println("자판기의 잔액: " + drinkMachine.money);
-		System.out.println("자판기의 상품수량: " + drinkMachine.product.quantity);
-		System.out.println("musk의 잔액: " + musk.wallet);
-		System.out.println("musk의 상품수량: " + musk.product.quantity);
+		System.out.println("자판기의 잔액: " + drinkMachine.getMoney());
+		System.out.println("자판기의 상품수량: " + drinkMachine.getProduct().getQuantity());
+		System.out.println("musk의 잔액: " + musk.getWallet());
+		System.out.println("musk의 상품수량: " + musk.getProduct().getQuantity());
 	}
 
 	/**
@@ -54,23 +54,29 @@ public class Mart {
 		drinkMachine.insertMoney(musk);
 		drinkMachine.pressButton(musk);
 		
+		System.out.println("자판기의 잔액: " + drinkMachine.getMoney());
+		System.out.println("자판기의 상품수량: " + drinkMachine.getProduct().getQuantity());
+		System.out.println("자판기의 상품이름: " + drinkMachine.getProduct().getName());
+		System.out.println("musk의 잔액: " + musk.getWallet());
+		System.out.println("musk의 상품수량: " + musk.getProduct().getQuantity());
+		
 		snackMachine.insertMoney(musk);
 		snackMachine.pressButton(musk);
 		
-		System.out.println("자판기의 잔액: " + drinkMachine.money);
-		System.out.println("자판기의 상품수량: " + drinkMachine.product.quantity);
-		System.out.println("자판기의 상품이름: " + drinkMachine.product.name);
-		System.out.println("musk의 잔액: " + musk.wallet);
-		System.out.println("musk의 상품수량: " + musk.product.quantity);
+		System.out.println("자판기의 잔액: " + drinkMachine.getMoney());
+		System.out.println("자판기의 상품수량: " + drinkMachine.getProduct().getQuantity());
+		System.out.println("자판기의 상품이름: " + drinkMachine.getProduct().getName());
+		System.out.println("musk의 잔액: " + musk.getWallet());
+		System.out.println("musk의 상품수량: " + musk.getProduct().getQuantity());
 		
 		drinkMachine.insertMoney(musk);
 		drinkMachine.pressButton(musk);
 
-		System.out.println("자판기의 잔액: " + drinkMachine.money);
-		System.out.println("자판기의 상품수량: " + drinkMachine.product.quantity);
-		System.out.println("자판기의 상품이름: " + drinkMachine.product.name);
+		System.out.println("자판기의 잔액: " + drinkMachine.getMoney());
+		System.out.println("자판기의 상품수량: " + drinkMachine.getProduct().getQuantity());
+		System.out.println("자판기의 상품이름: " + drinkMachine.getProduct().getName());
 
-		System.out.println("musk의 잔액: " + musk.wallet);
-		System.out.println("musk의 상품수량: " + musk.product.quantity);
+		System.out.println("musk의 잔액: " + musk.getWallet());
+		System.out.println("musk의 상품수량: " + musk.getProduct().getQuantity());
 	}
 }

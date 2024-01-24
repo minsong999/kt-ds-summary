@@ -6,6 +6,12 @@ public class VendingMachine {
 	Product product3 = new Product();
 	Product product4 = new Product();
 	
+	//클래스 상수(공용 상수)
+	/**
+	 * 한번에 구매 할 수 있는 제품의 수
+	 */
+	public static final int PRODUCT_COUNT = 1;
+	
 	public VendingMachine() {
 		this.product = new Product();
 		this.product2 = new Product();
