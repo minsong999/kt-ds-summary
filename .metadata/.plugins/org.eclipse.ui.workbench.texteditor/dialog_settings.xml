@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="result2"/>
+		<item key="selection" value="score"/>
 		<item key="wrap" value="true"/>
-		<item key="casesensitive" value="false"/>
+		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
-		<item key="incremental" value="false"/>
+		<item key="incremental" value="true"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="result2"/>
-			<item value="for (int i = 1; i &lt; 101; i++) {"/>
-			<item value="package hello_java_world;"/>
-			<item value="i"/>
-			<item value="/*"/>
-			<item value="int number1 = 10;"/>
-			<item value="double dnum = 11.15;"/>
-			<item value="&#x09;package hello_java_world;"/>
-			<item value="&#x09;&#x09;System.out.println(&quot;Hello, Java World!&quot;);"/>
+			<item value="score"/>
+			<item value="out"/>
+			<item value="out()"/>
+			<item value="gamePalyCount"/>
+			<item value="keyboard"/>
+			<item value="&#x09;&#x09;System.out.println(&quot;자판기 인스턴스를 만들었습니다.&quot;);"/>
+			<item value="100"/>
+			<item value="vending"/>
+			<item value="VendingMachine"/>
+			<item value="1600"/>
+			<item value="snackMachine"/>
+			<item value="pressButton"/>
+			<item value="productCount"/>
 		</list>
 		<list key="replacehistory">
+			<item value="book3"/>
+			<item value="book2"/>
+			<item value="드링크4"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="807"/>
-		<item key="DIALOG_Y_ORIGIN" value="268"/>
+		<item key="DIALOG_X_ORIGIN" value="971"/>
+		<item key="DIALOG_Y_ORIGIN" value="293"/>
 		<item key="DIALOG_WIDTH" value="322"/>
-		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_HEIGHT" value="361"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 </section>

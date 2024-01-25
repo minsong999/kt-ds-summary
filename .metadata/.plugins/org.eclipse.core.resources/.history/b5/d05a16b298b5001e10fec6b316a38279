@@ -1,7 +1,0 @@
-package hello_java_world;
-
-public class ArtithmaticProblem2 {
-	public static void main(String[] args) {
-
-	}
-}
