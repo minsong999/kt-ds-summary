@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="score"/>
+		<item key="selection" value=".name"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="true"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="score"/>
-			<item value="out"/>
-			<item value="out()"/>
-			<item value="gamePalyCount"/>
-			<item value="keyboard"/>
-			<item value="&#x09;&#x09;System.out.println(&quot;자판기 인스턴스를 만들었습니다.&quot;);"/>
-			<item value="100"/>
-			<item value="vending"/>
-			<item value="VendingMachine"/>
-			<item value="1600"/>
-			<item value="snackMachine"/>
-			<item value="pressButton"/>
-			<item value="productCount"/>
+			<item value=".name"/>
+			<item value="name"/>
+			<item value=".Name"/>
+			<item value="&#x09;public Vehicle() {"/>
+			<item value="root"/>
+			<item value="order"/>
+			<item value="drinkArray"/>
+			<item value="orderedDrink"/>
+			<item value="get"/>
+			<item value="productArray"/>
+			<item value="array"/>
 		</list>
 		<list key="replacehistory">
 			<item value="book3"/>

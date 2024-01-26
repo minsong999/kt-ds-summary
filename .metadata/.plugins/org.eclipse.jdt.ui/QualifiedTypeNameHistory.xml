@@ -22,7 +22,6 @@
     <fullyQualifiedTypeName name="java.lang.reflect.Member"/>
     <fullyQualifiedTypeName name="com.naver.member.management.Member"/>
     <fullyQualifiedTypeName name="java.lang.OutOfMemoryError"/>
-    <fullyQualifiedTypeName name="vending_machine.Product"/>
     <fullyQualifiedTypeName name="oop_exam.Car"/>
     <fullyQualifiedTypeName name="class_method.ClassMethodExam"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
@@ -35,6 +34,14 @@
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="vending_machine.TemperatureProduct"/>
+    <fullyQualifiedTypeName name="Vehicle.SportsCar"/>
+    <fullyQualifiedTypeName name="Vehicle.BatMobile"/>
+    <fullyQualifiedTypeName name="java.awt.Event"/>
+    <fullyQualifiedTypeName name="Vehicle.VehicleMain"/>
+    <fullyQualifiedTypeName name="Vehicle.EV"/>
+    <fullyQualifiedTypeName name="Vehicle.Vehicle"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+    <fullyQualifiedTypeName name="vending_machine.Product"/>
 </qualifiedTypeNameHistroy>
