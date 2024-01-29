@@ -45,6 +45,15 @@ public class Customer {
 	}
 
 	/**
+	 * 환불 받는다.
+	 * 
+	 * @param money 환불 받은 금액
+	 */
+	public void addMoney(int money) {
+		this.wallet += money;
+	}
+
+	/**
 	 * 상품이 증가한다.
 	 */
 	public void addStock(String name, int price) {

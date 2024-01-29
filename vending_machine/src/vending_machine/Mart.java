@@ -74,9 +74,25 @@ public class Mart {
 		 */		//TemperatureProduct(p); //문법상 오류
 		//TemperatureProduct(tp); //사용 가능하다.
 		
+		// Selller (추상클래스일때)
+		// --> VendingMachine
+		// --> RefundableVendingMachine
+		// IS a 관계 성립
+		// RefundableVendingMachine is Seller
+		// Seller drinkVendingMachine = new VendingMachine();
+		// Seller drinkVendingMachine = new RefundableVendingMachine();
+		
+		//Sellable (인터페이스)
+		// --> (구현) VendingMachine
+		// --> (구현) RefundableVendingMachine
+		// 인터페이스를 구현 (IS A)
+		// RefundableVendingMachine is Sellable
+		// Sellable drinkVendingMachine = new VendingMachine();
+		// Sellable drinkVendingMachine = new RefundableVendingMachine();
+		
 		// 객체지향방식으로 개발
 		// VendingMachine 생성자를 호출해 인스턴스 생성
-		VendingMachine drinkMachine = new VendingMachine();
+		Sellable drinkMachine = new VendingMachine();
 		//아래의 코드는 VendingMachine의 ㅐㅇ성자에서 대체함.
 //		drinkMachine.money = 3000;
 //		drinkMachine.productQuantity = 5;
@@ -88,20 +104,20 @@ public class Mart {
 //		musk.stock = 0;
 		
 		drinkMachine.insertMoney(musk,"제로펩시");
-		drinkMachine.pressButton(musk,"제로펩시");
+		drinkMachine.pressButton(musk,"제로펩시", 50);
 		
-		drinkMachine.insertMoney(musk,"제로콜라");
-		drinkMachine.pressButton(musk,"제로콜라");
+		drinkMachine.insertMoney(musk,"제로펩시");
+		drinkMachine.pressButton(musk,"제로펩시");
 
 		musk.printProducts();
 		drinkMachine.printProducts();
 		
 		System.out.println("-------------------------------------------------------");
 		// 메소드 오버로딩 생성자 오버로딩 출력해보기
-		VendingMachine snackMachine = new VendingMachine(400);
+		Sellable snackMachine = new RefundableVendingMachine(400);
 
-		snackMachine.insertMoney(musk, "제로스프라이트");
-		snackMachine.pressButton(musk, "제로스프라이트", 4);
+		snackMachine.insertMoney(musk, "제로펩시");
+		snackMachine.pressButton(musk, "제로펩시", 55);
 		
 		snackMachine.insertMoney(musk, "제로펩시");
 		snackMachine.pressButton(musk, "제로펩시", 2);
