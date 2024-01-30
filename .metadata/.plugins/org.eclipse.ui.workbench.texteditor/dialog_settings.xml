@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="readFile2"/>
+		<item key="selection" value="*"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="true"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="convertToInt"/>
 			<item value="readFile2"/>
 			<item value="readFile"/>
 			<item value="main"/>
@@ -22,7 +23,6 @@
 			<item value="Files"/>
 			<item value="랴ㅣㄷ"/>
 			<item value="dispatchUncaughtException"/>
-			<item value="syso"/>
 		</list>
 		<list key="replacehistory">
 			<item value="book3"/>

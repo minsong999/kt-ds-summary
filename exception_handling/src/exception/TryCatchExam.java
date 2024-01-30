@@ -40,17 +40,18 @@ public class TryCatchExam {
 		// return 0;
 	}
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args){
 		
-		File imageFile2 = new File("C:\\dev_program\\eclipse_workspace\\JAVA 연습문제.txtqqq");
-		readFile2(imageFile2);
-		
+//		File imageFile2 = new File("C:\\dev_program\\eclipse_workspace\\JAVA 연습문제.txtqqq");
+//		readFile2(imageFile2);
+//		
 		System.out.println("-----------------------------------------------------------");
 		
 		try {
 			int a = convertToInt("예외는여");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
+			
 		}
 
 		// 시스템 드라이브에서 특정 경로에 있는 파일 또는 폴더를 읽어온다.
@@ -64,8 +65,12 @@ public class TryCatchExam {
 			// catch문에 (Exception e)로 쓰면 안 된다. - 코드품질검사...
 		} catch (IOException ioe) {
 			String message = ioe.getMessage();
+			String message2 = ioe.toString();
 			System.out.println(message);
+			System.out.println(message2);
+			System.out.println("-----------------------------------------------------------");
 			ioe.printStackTrace();
+		
 		} finally {
 			System.out.println("File을 읽고 Finally가 실행되었습니다.");
 		}

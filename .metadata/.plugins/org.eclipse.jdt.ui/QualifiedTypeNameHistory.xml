@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="oop_exam.Customer"/>
     <fullyQualifiedTypeName name="oop_exam.VendingMachine"/>
     <fullyQualifiedTypeName name="java.lang.Process"/>
     <fullyQualifiedTypeName name="vending_machine_exam.VendingMachine"/>
@@ -50,8 +49,6 @@
     <fullyQualifiedTypeName name="java.lang.Runtime"/>
     <fullyQualifiedTypeName name="exception_handling.exceptions.InvalidUserException"/>
     <fullyQualifiedTypeName name="java.lang.Throwable"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="exception.InvalidUserIdException"/>
     <fullyQualifiedTypeName name="exception_handling.exceptions.AlreadyUseUserIdException"/>
     <fullyQualifiedTypeName name="exception_handling.exceptions.UserIdLengthException"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="exception_handling.exceptions.ReadFailException"/>
     <fullyQualifiedTypeName name="java.lang.System.Logger"/>
     <fullyQualifiedTypeName name="java.util.logging.Logger"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
