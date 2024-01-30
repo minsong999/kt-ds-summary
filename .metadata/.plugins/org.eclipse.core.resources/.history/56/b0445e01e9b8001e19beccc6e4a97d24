@@ -1,9 +1,0 @@
-package oop_exam;
-
-public class ClassRoom {
-	public static void main(String[] args) {
-		Calculator 학생1 = new Calculator();
-		
-		
-	}
-}
