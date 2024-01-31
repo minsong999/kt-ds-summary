@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="oop_exam.VendingMachine"/>
-    <fullyQualifiedTypeName name="java.lang.Process"/>
-    <fullyQualifiedTypeName name="vending_machine_exam.VendingMachine"/>
-    <fullyQualifiedTypeName name="vending_machine_exam.Product"/>
-    <fullyQualifiedTypeName name="java.lang.reflect.Member"/>
-    <fullyQualifiedTypeName name="com.naver.member.management.Member"/>
-    <fullyQualifiedTypeName name="java.lang.OutOfMemoryError"/>
-    <fullyQualifiedTypeName name="oop_exam.Car"/>
-    <fullyQualifiedTypeName name="class_method.ClassMethodExam"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-    <fullyQualifiedTypeName name="java.lang.Number"/>
     <fullyQualifiedTypeName name="javax.print.attribute.standard.DateTimeAtCompleted"/>
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="vending_machine.TemperatureProduct"/>
     <fullyQualifiedTypeName name="Vehicle.SportsCar"/>
     <fullyQualifiedTypeName name="Vehicle.BatMobile"/>
@@ -22,9 +9,6 @@
     <fullyQualifiedTypeName name="Vehicle.VehicleMain"/>
     <fullyQualifiedTypeName name="Vehicle.EV"/>
     <fullyQualifiedTypeName name="Vehicle.Vehicle"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
-    <fullyQualifiedTypeName name="vending_machine.Product"/>
-    <fullyQualifiedTypeName name="vending_machine.Customer"/>
     <fullyQualifiedTypeName name="vending_machine.RefundableVendingMachine"/>
     <fullyQualifiedTypeName name="com.ktdsuniversity.terranunit.Unit"/>
     <fullyQualifiedTypeName name="com.ktdsuniversity.terranunit.Marine"/>
@@ -37,12 +21,10 @@
     <fullyQualifiedTypeName name="com.ktdsuniversity.terranunit.Mineable"/>
     <fullyQualifiedTypeName name="oop_exam.NumberUtil"/>
     <fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.HTMLReader.IsindexAction"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.lang.Class"/>
     <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.nio.file.Files"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
@@ -60,4 +42,22 @@
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+    <fullyQualifiedTypeName name="javax.swing.event.RowSorterListener"/>
+    <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="vending_machine.Customer"/>
+    <fullyQualifiedTypeName name="java.util.logging.Handler"/>
+    <fullyQualifiedTypeName name="vending_machine.Product"/>
+    <fullyQualifiedTypeName name="vending_machine.InsertMoneyHandler"/>
+    <fullyQualifiedTypeName name="vending_machine.PressButtonHandler"/>
+    <fullyQualifiedTypeName name="vending_machine.PrintHandler"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

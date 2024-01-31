@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="*"/>
+		<item key="selection" value="lottoNumList"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="true"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="convertToInt"/>
-			<item value="readFile2"/>
-			<item value="readFile"/>
-			<item value="main"/>
-			<item value="seri"/>
-			<item value="throws"/>
-			<item value="NumberFormatException"/>
-			<item value="detailMessage"/>
-			<item value="detail"/>
-			<item value="detailmessage"/>
-			<item value="try {"/>
-			<item value="getMessage"/>
-			<item value="Files"/>
-			<item value="랴ㅣㄷ"/>
-			<item value="dispatchUncaughtException"/>
+			<item value="lottoNumList"/>
+			<item value="inputLottoNum"/>
+			<item value="HashMap()"/>
+			<item value="HashMap"/>
+			<item value="addall"/>
+			<item value="100"/>
+			<item value="제로펩시"/>
+			<item value="insertMoney"/>
+			<item value="insertmoney"/>
+			<item value="price"/>
+			<item value="pressButton"/>
+			<item value="drinkMachine"/>
+			<item value="musk"/>
+			<item value="insertMoneyHandler"/>
+			<item value="setInsertMoneyHandler"/>
 		</list>
 		<list key="replacehistory">
+			<item value="snackMachine"/>
 			<item value="book3"/>
 			<item value="book2"/>
 			<item value="드링크4"/>
