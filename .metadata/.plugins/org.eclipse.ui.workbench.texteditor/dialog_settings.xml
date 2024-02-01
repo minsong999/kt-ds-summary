@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="lottoNumList"/>
+		<item key="selection" value="write"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="true"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="lottoNumList"/>
-			<item value="inputLottoNum"/>
-			<item value="HashMap()"/>
-			<item value="HashMap"/>
+			<item value="write"/>
+			<item value="/n"/>
+			<item value="addProduct"/>
+			<item value="add"/>
+			<item value="insert"/>
+			<item value="geta"/>
+			<item value="description"/>
 			<item value="addall"/>
-			<item value="100"/>
-			<item value="제로펩시"/>
-			<item value="insertMoney"/>
-			<item value="insertmoney"/>
-			<item value="price"/>
-			<item value="pressButton"/>
-			<item value="drinkMachine"/>
-			<item value="musk"/>
-			<item value="insertMoneyHandler"/>
-			<item value="setInsertMoneyHandler"/>
+			<item value="file"/>
+			<item value="java_output"/>
+			<item value="originalFileDescription"/>
+			<item value="originalLine"/>
+			<item value="fileread"/>
+			<item value="writeFile"/>
+			<item value="Integer.parseInt(stringArray[1].trim()));"/>
 		</list>
 		<list key="replacehistory">
 			<item value="snackMachine"/>
