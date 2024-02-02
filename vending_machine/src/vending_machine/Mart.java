@@ -1,10 +1,9 @@
 package vending_machine;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
 import vending_machine.util.FileUtil;
+import vending_machine.util.NIOFileUtil;
 
 public class Mart {
 
@@ -27,7 +26,8 @@ public class Mart {
 	 */
 
 	public static List<Product> initiateProduct() {
-		List<Product> productList = FileUtil.readCSVFile("C://Java exam", "goods.csv");
+		//List<Product> productList = FileUtil.readCSVFile("C://Java exam", "goods.csv");
+		List<Product> productList = NIOFileUtil.readCSVFile("goods.csv");
 		return productList;
 	}
 
