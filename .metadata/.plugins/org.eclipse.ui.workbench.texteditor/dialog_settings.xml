@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="computeTime"/>
+		<item key="selection" value="setAnniversary"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="true"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="computeTime"/>
-			<item value="append"/>
-			<item value="add"/>
-			<item value="filePath"/>
-			<item value="files"/>
-			<item value="from"/>
-			<item value="readCSVFile"/>
-			<item value="csvList"/>
-			<item value="csv"/>
-			<item value="fileName"/>
-			<item value="filename"/>
-			<item value=".git"/>
-			<item value="itemInDir"/>
-			<item value="printAllItems"/>
-			<item value="printAllTimes"/>
+			<item value="setAnniversary"/>
+			<item value="userBirthYear"/>
+			<item value="after"/>
+			<item value="util"/>
+			<item value="NIOFileUtil"/>
+			<item value="nio"/>
+			<item value="writeFile"/>
+			<item value="tuil"/>
+			<item value="getBirthContactList"/>
+			<item value="userBirthMonth"/>
+			<item value="birth"/>
+			<item value="birthContact15List"/>
+			<item value="period"/>
+			<item value="now"/>
+			<item value="+15"/>
 		</list>
 		<list key="replacehistory">
 			<item value="snackMachine"/>
