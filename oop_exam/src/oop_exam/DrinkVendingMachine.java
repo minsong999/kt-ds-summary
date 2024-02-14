@@ -1,5 +1,12 @@
 package oop_exam;
 
+import java.nio.file.DirectoryStream.Filter;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+import fp_java.ch02.stream.vo.Dish;
+
 public class DrinkVendingMachine {
 
 	Drink[] drinkArray;
@@ -37,21 +44,41 @@ public class DrinkVendingMachine {
 	 * @return 주문한 상품의 정보
 	 */
 	public Drink order(String name, int quantity) {
-		Drink orderedDrink = new Drink();
-		for (Drink drink : drinkArray) {
-			if (drink != null && drink.getName().equals(name)) {
-				if (drink.getStock() < quantity) {
-					System.out.println("상품이 품절되었습니다."); // 상품이 품절되었습니다.를 출력
-					return null;
-				}
-				drink.setStock(drink.getStock() - quantity);
-				orderedDrink.setName(drink.getName());
-				orderedDrink.setStock(quantity);
-				orderedDrink.setPrice(drink.getPrice());
-			}
-		}
+//		Drink orderedDrink = new Drink();
+//		
+//		for (Drink drink : drinkArray) {
+//			if (drink != null && drink.getName().equals(name)) {
+//				if (drink.getStock() < quantity) {
+//					System.out.println("상품이 품절되었습니다."); // 상품이 품절되었습니다.를 출력
+//					return null;
+//				}
+//				drink.setStock(drink.getStock() - quantity);
+//				orderedDrink.setName(drink.getName());
+//				orderedDrink.setStock(quantity);
+//				orderedDrink.setPrice(drink.getPrice());
+//			}
+//		}
+		// return orderedDrink; // 만들어진 Drink 인스턴스 리턴
 
-		return orderedDrink; // 만들어진 Drink 인스턴스 리턴
+		Optional<Drink> soldoutDrink = Arrays.stream(this.drinkArray)
+				.filter(drink -> drink != null && drink.name.equals(name)).filter(drink -> drink.stock < quantity)
+				.findFirst();
+
+		if (soldoutDrink.isPresent()) {
+			System.out.println("상품이 품절되었습니다."); // 상품이 품절되었습니다.를 출력
+			return null;
+		}
+		Arrays.stream(this.drinkArray).filter(drink -> drink != null && drink.name.equals(name))
+				.filter(drink -> drink.stock > quantity)
+				.map(drink -> {
+					drink.stock -= quantity;
+
+					Drink orderedDrink = new Drink();
+					orderedDrink.setName(drink.getName());
+					orderedDrink.setStock(quantity);
+					orderedDrink.setPrice(drink.getPrice());
+					return orderedDrink;
+				}).findFirst().orElse(null);
 	}
 
 	/**

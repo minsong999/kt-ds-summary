@@ -1,5 +1,10 @@
 package generic_collection;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * 제네릭타입 사용한 ScoreList
  */
@@ -38,7 +43,7 @@ public class ScoreList<T> {
 		scoreArray[size] = score;
 		size += 1;
 	}
-	
+
 	/**
 	 * scoreArray 배열에서 index 에 할당된 값을 반환
 	 * 
@@ -73,11 +78,26 @@ public class ScoreList<T> {
 	@Override
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
-		for (int i = 0; i < size; i++) {
-			sb.append(scoreArray[i] + ", ");
-		}
+		sb.append("[");
+//		for (int i = 0; i < size; i++) {
+//			sb.append(scoreArray[i] + ", ");
+//		}
+		// sb.append("]");
+//		return sb.toString();
+
+		// Stream 으로 변경해보기
+		String scoreListToString = 
+				Arrays.stream(this.scoreArray)
+				.filter(object -> object != null)
+				.map(object -> object.toString())
+				.collect(Collectors.joining(", "));
+		
+		sb.append(scoreListToString);
+		
 		sb.append("]");
-		return sb.toString();
+
+		return scoreListToString;
+
 	}
 
 }
