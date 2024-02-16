@@ -1,0 +1,103 @@
+DOCKER
+===============================================
+sqlplus 입력 후 엔터
+username: sys as sysdba 입력 후 엔터
+password: 그냥 엔터
+
+// 계정 비밀번호 변경 명령
+ALTER USER SYSTEM IDENTIFIED BY "admin1234";
+
+// sql 접속 종료
+exit 입력 후 엔터
+
+whoami <-- 리눅스에 로그인 한 계정 보기
+su - root <-- 시스템 최고관리자 계정으로 전환하기
+yum install wget <-- wget 유틸리티 설치하기
+exit <-- 시스템 최고관리자 계정에서 로그아웃 하기
+
+↓ HR 스키마 다운로드 받기
+wget https://github.com/oracle-samples/db-sample-schemas/archive/refs/tags/v21.1.tar.gz
+
+pwd <-- 현재 작업 폴더 경로 확인하기
+>> /home/oracle
+
+↓ 작업폴더 이동하기
+cd /opt/oracle/product/21c/dbhomeXE
+↓ 작업폴더 이동하기
+cd demo/schema/
+
+↓ 디렉토리 목록 확인하기 (엘에스)
+ls
+
+pwd <-- 현재 작업 폴더 경로 확인하기
+>> /opt/oracle/product/21c/dbhomeXE/demo/schema
+
+↓ 작업폴더 이동하기
+cd /home/oracle
+
+↓ 디렉토리 목록 확인하기 (엘에스)
+ls
+
+↓ 파일 이동하기
+mv ./v21.1.tar.gz /opt/oracle/product/21c/dbhomeXE/demo/schema/v21.1.tar.gz
+
+↓ 작업폴더 이동하기
+cd /opt/oracle/product/21c/dbhomeXE/demo/schema
+
+↓ v21.1.tar.gz 파일 압축 풀기
+tar -xvzf v21.1.tar.gz
+
+↓ 폴더명 변경하기
+mv ./db-sample-schemas-21.1 ./human-resources
+
+↓ 작업폴더 이동하기
+cd human-resources/human_resources/
+
+
+su - root
+yum install vi
+exit
+
+↓ hr_main.sql 파일 편집하기
+vi hr_main.sql
+
+↓ vi 편집화면에서 __SUB__CWD__ 찾기
+뭔가 잘못 작성한것 같다 싶으면..
+esc -> :q! 엔터
+다 잘 작성한 뒤에 저장 후 종료
+esc -> :wq 엔터
+
+찾기 
+위에서부터 찾기 /검색어
+아래에서부터 찾기 ?검색어
+esc -> /__SUB__CWD__   엔터
+텍스트 지우기 : x
+줄지우기 : dd
+
+i 누른 후
+__SUB__CWD__ => ?/demo/schema/human-resources
+
+↓편집이 끝나면 저장 후 종료
+esc -> :wq 엔터
+
+↓ sqlplus 접속
+sqlplus
+sys as sysdba
+
+↓ HR 스키마 설치
+ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;
+@?/demo/schema/human-resources/human_resources/hr_main.sql
+
+1의 값: hr
+2의 값: users
+3의 값: temp
+4의 값: 
+5의 값: /opt/oracle/product/21c/dbhomeXE/demo/schema/log
+6의 값: localhost:1521/xe
+
+
+완료 후 DBeaver SYSTEM 계정으로 DB 접속 후 아래 명령 실행
+ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;
+ALTER USER hr ACCOUNT UNLOCK IDENTIFIED BY "admin1234";
+
+완료.

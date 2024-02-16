@@ -5,8 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import fp_java.ch02.stream.vo.Dish;
-
 public class DrinkVendingMachine {
 
 	Drink[] drinkArray;
@@ -41,9 +39,8 @@ public class DrinkVendingMachine {
 	 * 
 	 * @param name     주문할 상품의 이름
 	 * @param quantity 주문할 수량
-	 * @return 주문한 상품의 정보
 	 */
-	public Drink order(String name, int quantity) {
+	public void order(String name, int quantity) {
 //		Drink orderedDrink = new Drink();
 //		
 //		for (Drink drink : drinkArray) {
@@ -66,7 +63,6 @@ public class DrinkVendingMachine {
 
 		if (soldoutDrink.isPresent()) {
 			System.out.println("상품이 품절되었습니다."); // 상품이 품절되었습니다.를 출력
-			return null;
 		}
 		Arrays.stream(this.drinkArray).filter(drink -> drink != null && drink.name.equals(name))
 				.filter(drink -> drink.stock > quantity)

@@ -1,0 +1,4 @@
+https://www.oracle.com/kr/database/technologies/appdev/jdbc-downloads.html
+
+Oracle Database 21c (21.11.0.0) JDBC Driver & UCP Downloads - Innovation Release
+ojdbc11.jar 다운로드
