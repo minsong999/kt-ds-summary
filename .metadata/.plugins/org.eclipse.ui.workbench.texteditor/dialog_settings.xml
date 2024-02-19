@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="setAnniversary"/>
+		<item key="selection" value="+ 1"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="true"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="setAnniversary"/>
-			<item value="userBirthYear"/>
-			<item value="after"/>
-			<item value="util"/>
-			<item value="NIOFileUtil"/>
-			<item value="nio"/>
-			<item value="writeFile"/>
-			<item value="tuil"/>
-			<item value="getBirthContactList"/>
-			<item value="userBirthMonth"/>
-			<item value="birth"/>
-			<item value="birthContact15List"/>
-			<item value="period"/>
-			<item value="now"/>
-			<item value="+15"/>
+			<item value="+ 1"/>
+			<item value="setlong"/>
+			<item value="closecon"/>
+			<item value="select"/>
+			<item value="type"/>
+			<item value="selectOne"/>
+			<item value="selectlist"/>
+			<item value="filter"/>
+			<item value="for"/>
+			<item value="order"/>
+			<item value=".map"/>
+			<item value="Collectors"/>
+			<item value="랙"/>
+			<item value="scoreList"/>
+			<item value="scorelist"/>
 		</list>
 		<list key="replacehistory">
 			<item value="snackMachine"/>
