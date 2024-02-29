@@ -1,30 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="+ 1"/>
+		<item key="selection" value="REG_DATE"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="true"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="+ 1"/>
-			<item value="setlong"/>
-			<item value="closecon"/>
-			<item value="select"/>
-			<item value="type"/>
-			<item value="selectOne"/>
-			<item value="selectlist"/>
-			<item value="filter"/>
-			<item value="for"/>
-			<item value="order"/>
-			<item value=".map"/>
-			<item value="Collectors"/>
-			<item value="랙"/>
-			<item value="scoreList"/>
-			<item value="scorelist"/>
+			<item value="REG_DATE"/>
+			<item value="newActorPk"/>
+			<item value="castsVO"/>
+			<item value="actorsVO"/>
+			<item value="CAST_ID"/>
+			<item value="make"/>
+			<item value="SELECTONE"/>
+			<item value="create"/>
 		</list>
 		<list key="replacehistory">
+			<item value="DirectorsVO"/>
 			<item value="snackMachine"/>
 			<item value="book3"/>
 			<item value="book2"/>
