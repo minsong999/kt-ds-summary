@@ -1,9 +1,12 @@
 package com.ktdsuniversity.watcha.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import com.ktdsuniversity.watcha.dao.CastsDAO;
 import com.ktdsuniversity.watcha.dao.MoviesDAO;
 import com.ktdsuniversity.watcha.dao.ProducingDAO;
+import com.ktdsuniversity.watcha.dao.RatingsDAO;
 import com.ktdsuniversity.watcha.util.DBSupporter;
 import com.ktdsuniversity.watcha.vo.MoviesVO;
 
@@ -14,10 +17,14 @@ public class MoviesService {
 
 	private MoviesDAO moviesDAO;
 	private ProducingDAO producingDAO;
+	private RatingsDAO ratingsDAO;
+	private CastsDAO castsDAO;
 
 	public MoviesService() {
 		this.moviesDAO = new MoviesDAO();
 		this.producingDAO = new ProducingDAO();
+		this.ratingsDAO = new RatingsDAO();
+		this.castsDAO = new CastsDAO();
 	}
 
 	public boolean createNewMovie(String title, int minimumAge, String openYear, int runningTime, String genre,
@@ -27,7 +34,6 @@ public class MoviesService {
 
 		// 영화의 새로운 pk값을 받아온다.
 		String newMoviePk = moviesDAO.makeNextValue(dbSupporter);
-
 
 		MoviesVO moviesVO = new MoviesVO();
 		moviesVO.setMovieId(newMoviePk);
@@ -59,14 +65,17 @@ public class MoviesService {
 //				insertDirectorsCount += this.producingDAO.insertNewProducing(dbSupporter, directorsId.get(i), newMoviePk);
 //			}
 
-			for(String directorId : directorsId) {
-				try {
-				insertDirectorsCount += this.producingDAO.insertNewProducing(dbSupporter, directorId, newMoviePk);
-				}catch (RuntimeException re) {
+			if (directorsId != null) {
+				for (String directorId : directorsId) {
+					try {
+						insertDirectorsCount += this.producingDAO.insertNewProducing(dbSupporter, directorId,
+								newMoviePk);
+					} catch (RuntimeException re) {
 						re.printStackTrace();
 						dbSupporter.rollback();
 						dbSupporter.close();
 						return false;
+					}
 				}
 			}
 
@@ -80,7 +89,115 @@ public class MoviesService {
 		}
 
 		dbSupporter.close();
-		return insertDirectorsCount > 0;
+		return insertMovieCount > 0 || insertDirectorsCount >0;
+	}
+
+	public List<MoviesVO> findAllMovies() {
+		DBSupporter dbSupporter = new DBSupporter("WATCHA", "WATCHA");
+		dbSupporter.open();
+		List<MoviesVO> movies = new ArrayList<>();
+		try {
+
+			movies = this.moviesDAO.selectAllMovies(dbSupporter);
+		} catch (RuntimeException re) {
+			re.printStackTrace();
+			dbSupporter.close();
+			return new ArrayList<>();
+		}
+		dbSupporter.close();
+		return movies;
+	}
+
+	public List<MoviesVO> findMoviesByTitle(String movieTitle) {
+		DBSupporter dbSupporter = new DBSupporter("WATCHA", "WATCHA");
+		dbSupporter.open();
+		List<MoviesVO> movies = new ArrayList<>();
+		try {
+			movies = this.moviesDAO.selectMoviesByTitle(dbSupporter, movieTitle);
+		} catch (RuntimeException re) {
+			re.printStackTrace();
+			dbSupporter.close();
+			return null;
+		}
+		dbSupporter.close();
+		return movies;
+	}
+
+	public MoviesVO findMovieById(String movieId) {
+		DBSupporter dbSupporter = new DBSupporter("WATCHA", "WATCHA");
+		dbSupporter.open();
+		MoviesVO movies = new MoviesVO();
+		try {
+			movies = this.moviesDAO.selectMoviesById(dbSupporter, movieId);
+		} catch (RuntimeException re) {
+			re.printStackTrace();
+			dbSupporter.close();
+			return null;
+		}
+		dbSupporter.close();
+		return movies;
+	}
+
+	public boolean modifyOneMovie(MoviesVO moviesVO) {
+		DBSupporter dbSupporter = new DBSupporter("WATCHA", "WATCHA");
+		dbSupporter.open();
+
+		int updatedCount = 0;
+		try {
+			updatedCount = this.moviesDAO.updateOneMovie(dbSupporter, moviesVO);
+		} catch (RuntimeException re) {
+			re.printStackTrace();
+			dbSupporter.rollback();
+			return false;
+		}
+		dbSupporter.close();
+		return updatedCount > 0;
+	}
+
+	public boolean deleteOneMovieById(String movieId) {
+		DBSupporter dbSupporter = new DBSupporter("WATCHA", "WATCHA");
+		dbSupporter.open();
+
+		int deletedRatingsCount = 0;
+		try {
+			deletedRatingsCount = this.ratingsDAO.deleteRatingsByMovieId(dbSupporter, movieId);
+			System.out.println(deletedRatingsCount + "건의 평점을 삭제했습니다.");
+		} catch (RuntimeException re) {
+			re.printStackTrace();
+			dbSupporter.rollback();
+			return false;
+		}
+
+		int deletedCastsCount = 0;
+		try {
+			deletedCastsCount = this.castsDAO.deleteCastsByMovieId(dbSupporter, movieId);
+			System.out.println(deletedRatingsCount + "건의 출연배우를 삭제했습니다.");
+		} catch (RuntimeException re) {
+			re.printStackTrace();
+			dbSupporter.rollback();
+			return false;
+		}
+
+		int deletedProducingCount = 0;
+		try {
+			deletedProducingCount = this.producingDAO.deleteProducingByMovieId(dbSupporter, movieId);
+			System.out.println(deletedRatingsCount + "건의 제작자를 삭제했습니다.");
+		} catch (RuntimeException re) {
+			re.printStackTrace();
+			dbSupporter.rollback();
+			return false;
+		}
+
+		int deletedCount = 0;
+		try {
+			deletedCount = this.moviesDAO.deleteOneMovie(dbSupporter, movieId);
+		} catch (RuntimeException re) {
+			re.printStackTrace();
+			dbSupporter.rollback();
+			return false;
+		}
+		dbSupporter.close();
+		return deletedCount > 0;
 	}
 
 }

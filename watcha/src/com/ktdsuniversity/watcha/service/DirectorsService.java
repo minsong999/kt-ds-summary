@@ -2,8 +2,10 @@ package com.ktdsuniversity.watcha.service;
 
 import java.util.List;
 
+import com.ktdsuniversity.watcha.dao.CastsDAO;
 import com.ktdsuniversity.watcha.dao.DirectorDAO;
 import com.ktdsuniversity.watcha.dao.MoviesDAO;
+import com.ktdsuniversity.watcha.dao.ProducingDAO;
 import com.ktdsuniversity.watcha.util.DBSupporter;
 import com.ktdsuniversity.watcha.vo.DirectorsVO;
 import com.ktdsuniversity.watcha.vo.MoviesVO;
@@ -15,10 +17,12 @@ public class DirectorsService {
 
 	private DirectorDAO directorsDao;
 	private MoviesDAO moviesDao;
+	private ProducingDAO producingDao;
 
 	public DirectorsService() {
 		this.directorsDao = new DirectorDAO();
 		this.moviesDao = new MoviesDAO();
+		this.producingDao = new ProducingDAO();
 	}
 
 	public boolean createNewDirector(String direcotrsName, String directorsProfile) {
@@ -42,8 +46,7 @@ public class DirectorsService {
 		return insertedCount > 0;
 	}
 
-
-	public List<DirectorsVO> findDirectorsWithMovies() {
+	public List<DirectorsVO> findAllDirectors() {
 
 		DBSupporter dbSupporter = new DBSupporter("WATCHA", "WATCHA");
 		dbSupporter.open();
@@ -51,14 +54,55 @@ public class DirectorsService {
 		// 데이터 베이스에 등록된 모든 감독을 조회한다.
 		List<DirectorsVO> directors = this.directorsDao.selectAllDirectors(dbSupporter);
 
-		// 감독 목록을 반복하면서 해당 감독이 재작한 영화 목록을 조회한다.
-		directors.forEach((director) -> {
-			List<MoviesVO> movies = this.moviesDao.selectMoviesByDirectorId(dbSupporter, director.getDirectorId());
-			director.setMovies(movies);
-		});
+		dbSupporter.close();
+		return directors;
+	}
+
+	public List<DirectorsVO> findAllDirectorsByName(String name) {
+		DBSupporter dbSupporter = new DBSupporter("WATCHA", "WATCHA");
+		dbSupporter.open();
+
+		// 데이터 베이스에 등록된 모든 감독을 조회한다.
+		List<DirectorsVO> directors = this.directorsDao.selectDirectorsByName(dbSupporter, name);
 
 		dbSupporter.close();
 		return directors;
+	}
+
+	public DirectorsVO findDirectorsById(String directorsId) {
+		DBSupporter dbSupporter = new DBSupporter("WATCHA", "WATCHA");
+		dbSupporter.open();
+
+		// 데이터 베이스에 등록된 모든 감독을 조회한다.
+		DirectorsVO directorsVO = this.directorsDao.selectDirectorsById(dbSupporter, directorsId);
+
+		dbSupporter.close();
+		return directorsVO;
+	}
+
+	public boolean modifyOneDirector(DirectorsVO directorsVO) {
+		DBSupporter dbSupporter = new DBSupporter("WATCHA", "WATCHA");
+		dbSupporter.open();
+
+		// 데이터 베이스에 등록된 모든 감독을 조회한다.
+		int updatedDirectorsCount = this.directorsDao.updateOneDirector(dbSupporter, directorsVO);
+
+		dbSupporter.close();
+		return updatedDirectorsCount > 0;
+	}
+
+	public boolean deleteOneDirectorById(String directorsId) {
+		DBSupporter dbSupporter = new DBSupporter("WATCHA", "WATCHA");
+		dbSupporter.open();
+
+		int deletedCastsCount = this.producingDao.deleteProducingByMovieId(dbSupporter, directorsId);
+		System.out.println(deletedCastsCount + "건 제작 정보가 삭제되었습니다.");
+
+		// 데이터 베이스에 등록된 모든 감독을 조회한다.
+		int deleteDirectorsCount = this.directorsDao.deleteDirectorById(dbSupporter, directorsId);
+
+		dbSupporter.close();
+		return deleteDirectorsCount > 0;
 	}
 
 }

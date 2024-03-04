@@ -24,4 +24,13 @@ public class CastsDAO {
 		return dbSupporter.insert(query.toString(), new Object[] { castsVO.getActorId(), castsVO.getMovieId(),
 				castsVO.getCharacterName(), castsVO.getMainActorYn() });
 	}
+
+	public int deleteCastsByMovieId(DBSupporter dbSupporter, String movieId) {
+		StringBuffer query = new StringBuffer();
+
+		query.append("DELETE FROM WATCHA.CASTS ");
+		query.append("WHERE MOVIE_ID= ?");
+
+		return dbSupporter.delete(query.toString(), new Object[] { movieId });
+	}
 }

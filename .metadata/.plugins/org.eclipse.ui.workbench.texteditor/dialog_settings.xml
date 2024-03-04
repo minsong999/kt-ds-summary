@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="REG_DATE"/>
+		<item key="selection" value="insert"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="true"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="REG_DATE"/>
-			<item value="newActorPk"/>
-			<item value="castsVO"/>
-			<item value="actorsVO"/>
-			<item value="CAST_ID"/>
-			<item value="make"/>
-			<item value="SELECTONE"/>
-			<item value="create"/>
+			<item value="insert"/>
+			<item value="directorsDao"/>
+			<item value="findAllDirectors"/>
+			<item value="잘못된"/>
+			<item value="newPoster"/>
+			<item value="newOpenYear"/>
+			<item value="openYear"/>
+			<item value="ㅐㅔ두"/>
+			<item value="!= null"/>
+			<item value="directorsId"/>
+			<item value="printMainMenus"/>
+			<item value="movieTitle"/>
+			<item value="ratingsDAO"/>
+			<item value="Title"/>
+			<item value="getTitle"/>
 		</list>
 		<list key="replacehistory">
 			<item value="DirectorsVO"/>

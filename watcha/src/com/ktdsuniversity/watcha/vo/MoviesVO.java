@@ -106,6 +106,37 @@ public class MoviesVO {
 		this.directors = directors;
 	}
 
+	public List<CastsVO> getCasts() {
+		return casts;
+	}
 
+	public void setCasts(List<CastsVO> casts) {
+		this.casts = casts;
+	}
 
+	public void printSimpleDescription() {
+		StringBuffer result = new StringBuffer();
+		result.append("영화ID: " + this.movieId);
+		result.append("영화제목: " + this.getTitle());
+		result.append("영화개봉년도: " + this.getOpenYear());
+
+		System.out.println(result.toString());
+	}
+
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer();
+		result.append("영화ID: " + this.movieId);
+		result.append(" 제목: " + this.title);
+		result.append(" 개봉연도: " + this.openYear);
+		result.append(" 관람등급: " + this.minimumAge);
+		result.append(" 장르: " + this.genre);
+		result.append(" 분위기: " + this.atmosphere);
+		result.append(" 상영시간: " + this.runningTime);
+		result.append(" 촬영국가: " + this.location);
+		result.append(" 줄거리: " + this.summary);
+		result.append(" 포스터URL: " + this.poster);
+
+		return result.toString();
+	}
 }

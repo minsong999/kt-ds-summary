@@ -24,4 +24,14 @@ public class ProducingDAO {
 
 		return dbSupporter.insert(query.toString(), new Object[] { directorId, movieId });
 	}
+
+	public int deleteProducingByMovieId(DBSupporter dbSupporter, String movieId) {
+		// 	public int deleteRatingsByMovieId(DBSupporter dbSupporter, String movieId) {
+		StringBuffer query = new StringBuffer();
+
+		query.append("DELETE FROM WATCHA.PRODUCINGS ");
+		query.append("WHERE MOVIE_ID= ?");
+
+		return dbSupporter.delete(query.toString(), new Object[] { movieId });
+	}
 }
