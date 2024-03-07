@@ -1,85 +1,234 @@
-* 
-{
+/* 
+html의 모든 tag는 전부 다 box model.이다. 
+*/
+* {
     box-sizing: border-box;
 }
 
-body{
-    background-color: gray;
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: dimgray;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    background-color: white;
+    /* margin-left: 300px;
+    margin-right: 300px; */
+    /* 상 우 좌 하 */
+    /* margin: 10px 3px 20px 5px; */
+    /* 상하 좌우 */
+    /* margin: 0 300px; */
+    margin: 0 auto;
+    width: 600px;
+    height: 100%;
 }
 
 /* 
-div{
+div {
     background-color: white;
-} */
+} 
+*/
 
-.header{
+.Header {
     background-color: lightgray;
+    /* width: 500px;
+    border: 10px solid red;
+    padding: 30px;
+    margin: 100px; */
+    width: 100%;
 }
 
-.header-logo{
-    background-color: yellow;
+.header-logo {
+    background-color: rgb(254, 213, 10);
+    width: 100%;
 }
 
-.header-category{
+.header-logo-list {
+    margin: 0;
+    padding: 0;
+}
+
+.header-logo-list-item {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.header-logo-image{
+    vertical-align: middle;
+}
+
+.header-category {
     background-color: whitesmoke;
+    width: 100%;
 }
 
-.content{
+.header-category-list {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.header-category-list-item {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 40%;
+    padding: 13px;
+}
+
+.header-category-list-item:hover {
+    font-weight: bold;
+    color: #FF0000;
+    text-decoration: underline;
+}
+
+.header-category-active-item {
+    font-weight: bold;
+    color: red;
+    border-bottom: 3px solid red;
+}
+
+.Content {
     background-color: white;
+    height: calc(100% - 98px - 83px - 54px - 5px);
 }
 
-
-.content{
+.content-article {
     background-color: white;
+    /* padding: 10px; */
+    padding-bottom: 10px;
+    margin: 10px;
+    /* margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px; */
+    margin-right: 0;
+    /* border: 1px solid lightgray; */
+    border-bottom: 1px solid lightgray;
 }
 
-
-.content-article{
-    background-color: white;
-    margin:0px;
-    padding: 10px;
+.content-article:last-child{
+    border-bottom: none;
 }
 
-
-.content-article-title{
-    background-color: white;
-    margin:0px;
-    padding: 10px;
+.content-article-title {
+    font-weight: normal;
+    color: black;
+    margin: 0;
 }
 
-
-.cotnent-article-title-reply{
-    background-color: white;
-    color: orange;
+.content-article-title-reply-count {
+    color: coral;
+    font-size: 15px;
 }
 
-
-.content-article-author{
-    background-color: white;
-    color:brown
+.content-article-author-info-list {
+    padding: 0;
+    margin: 0;
 }
 
-.paginator{
+.content-article-author {
+    color: brown;
+    display: inline-block;
+}
+
+.content-article-author::after {
+    content: "|";
+    padding-left: 10px;
+    color: #dddddd;
+}
+
+.content-article-number {
+    color: gray;
+    display: inline-block;
+}
+
+.content-article-create-date {
+    color: gray;
+    display: inline-block;
+}
+
+.content-article-create-date::before{
+    content: "|";
+    padding-right: 10px;
+    color: #dddddd;
+}
+
+.paginator {
     background-color: lightgray;
+    padding: 20px 0px;
+    text-align: center;
 }
 
-.paginator-page-number{
+.paginator-page-number {
     background-color: aliceblue;
-    color:#888;
+    color: lightgray;
     padding: 10px;
+    display: inline-block;
+    border: 1px solid gray;
 }
 
-.paginator-active-page{
-color: red;
+.paginator-active-page {
+    color: red;
+    border: 1px solid red;
+    border-radius: 5px;
 }
 
-.footer{
+.paginator-list {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.Footer {
     background-color: black;
     color: gray;
 }
 
-.footer-button-area-login-btn
-{
+.footer-button-area {
+    text-align: center;
+}
+
+.footer-button-area-login-btn {
     background-color: darkgray;
-    font-size : 20px;
+    font-size: 20px;
+}
+
+.footer-copyright {
+    text-align: center;
+}
+
+/* a{
+    color: #333333;
+    text-decoration: none;
+    cursor: pointer;
+} */
+
+/*링크 스타일 변경*/
+a:link{
+    color: #333333;
+    text-decoration: none;
+}
+
+/*방문한 적 있는 링크 스타일 변경*/
+a:visited{
+    color:#0000FF;
+}
+
+/*클릭할 때의 스타일 변경*/
+a:active{
+    color:#FF0000;
+}
+
+/*마우스 올렸을 때*/
+a:hover{
+    font-weight: bold;
 }
