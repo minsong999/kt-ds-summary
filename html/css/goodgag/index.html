@@ -9,16 +9,32 @@
 </head>
 
 <body>
+    <div class="go-to-top">
+        <p>↑</p>
+        <p>top</p>
+    </div>
     <div class="container">
-
         <div class="Header">
             <div class="header-logo">
-                <ul class="header-logo-list">
+                <img class="header-logo-list-item" src="./assets/로고.PNG" alt="로고">
+                <img class="header-logo-list-item" src="./assets/My.PNG" alt="My">
+                <img class="header-logo-list-item" src="./assets/글쓰기.PNG" alt="글쓰기"></li>
+                
+                <!-- <div class="header-logo-list-item">
+                    <img src="./assets/로고.PNG" alt="로고">
+                </div>
+                <div class="header-logo-list-item">
+                    <img src="./assets/My.PNG" alt="My">
+                    <img src="./assets/글쓰기.PNG" alt="글쓰기"></li>
+                </div> -->
+                <!-- <ul class="header-logo-list">
                     <li class="header-logo-list-item"><img src="./assets/로고.PNG" alt="로고"></li>
-                    <li class="header-logo-list-item"><img src="./assets/My.PNG" alt="My"></li>
                     <li class="header-logo-list-item"><img src="./assets/글쓰기.PNG" alt="글쓰기"></li>
+                    <li class="header-logo-list-item"><img src="./assets/My.PNG" alt="My"></li>
                 </ul>
+                <div class="clear-line"></div> -->
             </div>
+            
             <div class="header-category">
                 <ul class="header-category-list">
                     <li class="header-category-list-item header-category-active-item">잇슈</li>
@@ -40,6 +56,9 @@
                     <li class="content-article-number">No.232710</li>
                     <li class="content-article-create-date">08:03</li>
                 </ul>
+                <div class="best_article">BEST
+                    <!-- <img src="./assets//best.PNG" /> -->
+                </div>
             </div>
 
             <div class="content-article">
@@ -99,6 +118,21 @@
             </div>
         </div>
 
+        <div class="search-area">
+            <form class="search-form">
+                <label for="search-type" for="search-type">검색타입</label>
+                <select class="search-input" id="search-type">
+                    <option>전체</option>
+                    <option>작성자</option>
+                    <option>내용</option>
+                    <option>작성자+내용</option>
+                    <option>글번호</option>
+                </select>
+                <label for="search-keyword" for="search-keyword">검색어</label>
+                <input class="search-input" id="search-keyword"/>
+                <button class="search-button">검색</button>
+            </form>
+        </div>
         <div class="paginator">
             <ul class="paginator-list">
                 <li class="paginator-page-number paginator-active-page">

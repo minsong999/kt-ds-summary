@@ -1,0 +1,51 @@
+body>div {
+    background-color: #ff9900;
+    padding: 10px;
+    width: 680px
+}
+
+div {
+    border: 3px solid #333;
+    margin: 10px
+}
+
+.move-point-absolute-in-relative{
+position: absolute;
+left:800px;
+
+}
+
+.position-absolute {
+    background-color: red;
+  
+    /* top:0;
+    left:0; */
+    /*문서 내부에서 절대 위치 지정 지정하지 않으면 Static을 가지지 않는 조상의 좌측 상단 고정*/
+}
+
+.position-relative {
+    background-color: #0f0;
+    /* position: relative; */
+    /*
+    상대적인 위치를 조정한다.
+    relative 가 적용된 박스는 현재 위치로부터 좌표계의 값이 0으로 초기화 된다.
+    */
+}
+
+.move-point {
+
+} 
+
+.position-fixed {
+    background-color: #00f;
+}
+
+.position-sticky {
+    background-color: #888;
+    position: sticky;
+    top:0px;
+}
+
+.position-empty{
+    height:1000px;
+}
