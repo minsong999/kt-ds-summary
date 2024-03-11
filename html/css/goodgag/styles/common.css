@@ -1,5 +1,5 @@
-/* 
-html의 모든 tag는 전부 다 box model.이다. 
+/*
+html의 모든 tag는 전부다 box model.
 */
 * {
     box-sizing: border-box;
@@ -7,29 +7,40 @@ html의 모든 tag는 전부 다 box model.이다.
 
 html {
     height: 100%;
-    width: 100%;
 }
 
 body {
     background-color: dimgray;
+    background-image: url("../assets/bg_tx.svg");
     margin: 0;
     height: 100%;
-    width: 100%;
+}
+
+.aside-menu{
+    background-color: #FFFC;
+    position: fixed;
+    width: 60%;
+    top: 0;
+    left: 0;
+    bottom:0;
+    z-index:3;
+    display: none;
 }
 
 .go-to-top {
     position: fixed;
-    bottom: 200px;
-    right: 250px;
+    bottom: 12.5rem;
+    right: 15.625rem;
     text-align: center;
     background-color: #FFF6;
-    padding: 10px;
+    /* padding: 10px; */
+    padding: 0.65rem;
     cursor: pointer;
 }
 
 .go-to-top p {
+    margin: 0;
     padding: 0;
-    margin-top: 0;
     font-weight: bold;
 }
 
@@ -37,76 +48,62 @@ body {
     background-color: white;
     /* margin-left: 300px;
     margin-right: 300px; */
-    /* 상 우 좌 하 */
     /* margin: 10px 3px 20px 5px; */
-    /* 상하 좌우 */
     /* margin: 0 300px; */
     margin: 0 auto;
-    width: 600px;
+    /* width: 600px; */
+    width: 50%;
+    /* min-width: 344px; */
+    min-width: 21rem;
+    /* max-width: 600px; */
+    max-width: 37.5rem;
     height: 100%;
 }
 
-/* 
+/*
 div {
     background-color: white;
-} 
+}
 */
 
-.Header {
+.header {
+    position: fixed;
+    /* width: 600px; */
+    width: 50%;
+    /* min-width: 344px; */
+    min-width: 21rem;
+    /* max-width: 600px; */
+    max-width: 37.5rem;
+    z-index: 2;
+    top: 0;
+
     background-color: lightgray;
     /* width: 500px;
     border: 10px solid red;
     padding: 30px;
     margin: 100px; */
-    width: 600px;
-    position: fixed;
-    z-index: 2;
-    top: 0;
 }
 
 .header-logo {
-    background-color: rgb(254, 213, 10);
-    width: 100%;
+    /*rgb(254, 213, 10);*/
+    background-color:#fed60a;
+
     position: relative;
 }
 
-.header-logo-list-item:nth-child(2){
+.header-logo-list-item:nth-child(2) {
     position: absolute;
-    right:45px;
+    /* right: 57px; */
+    right: 3.56rem
 }
 
-.header-logo-list-item:last-child{
+.header-logo-list-item:last-child {
     position: absolute;
-    right:10px;
+    /* right: 5px; */
+    right: 0.31rem;
 }
 
-/* .header-logo-list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.header-logo-list-item {
-    margin: 0;
-    padding: 0;
-    display: inline-block; 
-    float:right;
-} */
-
-/* .header-logo-list-item:nth-child(3){
-    float:right;
-}
-
-
-.header-logo-list-item:nth-child(2){
-    float:right;
-}
-
-
-.header-logo-list-item:nth-child(1){
-    float:left;
-} */
-/* 
+/* 이 방식이 정석이다.
 .header-logo-list-item {
     display: inline-block;
     width: 49%;
@@ -114,21 +111,38 @@ div {
 
 .header-logo-list-item:last-child {
     text-align: right;
+} 
+*/
+
+/* .header-logo-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 } */
 
+/*
+.header-logo-list-item {
+    margin-right: 5px;
+}
+*/
 
-
-.clear-line {
-    clear: both;
+/*
+.header-logo-list-item:nth-child(3) {
+    float: right;
 }
 
-.header-logo-image {
-    vertical-align: middle;
+.header-logo-list-item:nth-child(2) {
+    float: right;
 }
+
+.header-logo-list-item:first-child {
+    float: left;
+    margin-left: 10px;
+}
+*/
 
 .header-category {
     background-color: whitesmoke;
-    width: 100%;
 }
 
 .header-category-list {
@@ -138,11 +152,13 @@ div {
 }
 
 .header-category-list-item {
-    padding: 0;
-    margin: 0;
     display: inline-block;
     width: 40%;
-    padding: 13px;
+    /* height: 40px; */
+    /* padding: 13px; */
+    padding: 0.8rem;
+    /* font-style: italic; */
+    /* text-align: center; */
 }
 
 .header-category-list-item:hover {
@@ -151,55 +167,62 @@ div {
     text-decoration: underline;
 }
 
+.header-category-list-item:active {
+    /* font-size: 300%; */
+    font-size: 3rem;
+}
+
 .header-category-active-item {
     font-weight: bold;
     color: red;
-    border-bottom: 3px solid red;
+    border-bottom: 0.18rem solid red;
 }
 
-.Content {
+.content {
+    /* margin-top: 97.27px; */
+    margin-top: 5.7rem;
+
     background-color: white;
-    height: calc(100% - 98px - 83px - 54px - 5px);
-    margin-top: 93px;
-}
-
-.content-article:first {
-    margin-top: 0px;
-    padding-top: 10px;
+    height: calc(100% - 6.125rem - 5.18rem - 3.375rem - 0.165rem);
 }
 
 .content-article {
+    position: relative;
+
     background-color: white;
     /* padding: 10px; */
-    padding-bottom: 10px;
-    margin: 10px;
+    /* padding-bottom: 10px; */
+    padding-bottom: 0.625rem;
+    margin: 0.625rem;
     /* margin-top: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
-    margin-right: 10px; */
+    margin-left: 10px; */
     margin-right: 0;
-    /* border: 1px solid lightgray; */
+    /*border: 1px solid lightgray;*/
     border-bottom: 1px solid lightgray;
-    position: relative;
+}
+
+.content-article:first-child {
+    margin-top: 0px;
+    padding-top: 0.625rem;
 }
 
 .content-article:last-child {
-    border-bottom: none;
+    border-bottom: 0px;
 }
 
-.best_article {
-    background-color: #FF0000;
-    padding: 10px;
-    font-style: italic;
-    font-weight: bold;
-    color: #FFF;
+.best-article {
     position: absolute;
     top: 0;
-    right: 0;
-    margin: 10px;
-    vertical-align: top;
-}
+    right: 0.625rem;
 
+    background-color: #F00;
+    padding: 0.625rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #FFF;
+}
 
 .content-article-title {
     font-weight: normal;
@@ -209,7 +232,8 @@ div {
 
 .content-article-title-reply-count {
     color: coral;
-    font-size: 15px;
+    /* font-size: 15px; */
+    font-size: 0.8rem;
 }
 
 .content-article-author-info-list {
@@ -224,8 +248,8 @@ div {
 
 .content-article-author::after {
     content: "|";
-    padding-left: 10px;
-    color: #dddddd;
+    padding-left: 0.625rem;
+    color: #DDDDDD;
 }
 
 .content-article-number {
@@ -240,69 +264,73 @@ div {
 
 .content-article-create-date::before {
     content: "|";
-    padding-right: 10px;
-    color: #dddddd;
+    padding-right: 0.625rem;
+    color: #DDDDDD;
 }
 
 .search-area {
-    padding: 10px;
+    padding: 0.625rem;
     text-align: center;
 }
 
 .search-form {
     background-color: #F001;
-    padding: 10px;
+    padding: 0.625rem;
+}
+
+.search-title {
+    font-weight: bold;
     vertical-align: middle;
 }
 
 .search-input {
-    padding: 10px;
+    padding: 0.625rem;
     border-radius: 3px;
     border: 1px solid #CCC;
     vertical-align: middle;
-
 }
 
 .search-input:focus {
-    outline: none;
+    outline: 0px;
 }
 
 .search-button {
     background-color: #1a1af7;
-    padding: 10px;
-    border-radius: 3px;
-    color: white;
+    padding: 0.5rem;
+    border-radius: 0.18rem;
     border: 0px;
+    color: #FFF;
     vertical-align: middle;
 }
 
 .paginator {
     background-color: lightgray;
-    padding: 20px 0px;
+    padding: 1.25rem 0;
+    /*Paginator의 자식 엘리먼트(태그)들을 (수평)가운데 정렬한다.*/
     text-align: center;
+}
+
+.paginator-list {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
 }
 
 .paginator-page-number {
     background-color: aliceblue;
     color: lightgray;
-    padding: 10px;
+    padding: 0.625rem;
     display: inline-block;
     border: 1px solid gray;
+    border-radius: 0.31rem;
 }
 
 .paginator-active-page {
     color: red;
     border: 1px solid red;
-    border-radius: 5px;
 }
 
-.paginator-list {
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-}
-
-.Footer {
+.footer {
     background-color: black;
     color: gray;
 }
@@ -313,36 +341,39 @@ div {
 
 .footer-button-area-login-btn {
     background-color: darkgray;
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: 1.2rem;
 }
 
 .footer-copyright {
     text-align: center;
 }
 
-/* a{
+/*
+a {
     color: #333333;
     text-decoration: none;
-    cursor: pointer;
-} */
+}
+*/
 
-/*링크 스타일 변경*/
+/*링크 스타일을 변경*/
 a:link {
     color: #333333;
     text-decoration: none;
 }
-
-/*방문한 적 있는 링크 스타일 변경*/
+/*방문한 적이 있는 링크 스타일 변경*/
 a:visited {
     color: #0000FF;
 }
-
-/*클릭할 때의 스타일 변경*/
+/*링크를 클릭할 때의 스타일 변경*/
 a:active {
     color: #FF0000;
 }
-
-/*마우스 올렸을 때*/
+/*링크에 마우스를 올렸을 때 스타일 변경*/
 a:hover {
     font-weight: bold;
+}
+
+.clear-line {
+    clear: both;
 }

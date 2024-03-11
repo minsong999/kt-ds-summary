@@ -1,0 +1,49 @@
+@media(max-width:78rem){
+    .go-to-top{
+        display: none;
+    }
+}
+
+@media(max-width:65rem){
+    .search-title{
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .search-button{
+        display: block;
+        width: 100%;
+        
+    }
+
+    .search-input{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media(max-width:27rem){
+    .best-article{
+        top:2rem;
+    }
+
+    .header-category-list-item{
+        display: block;
+        width: 98%;
+        margin: 0 auto;
+    }
+
+    .content{
+        margin-top: 8.9rem;
+    }
+
+    .header-logo-list-item:nth-child(2),
+    .header-logo-list-item:nth-child(3) {
+        display: none;
+    }
+
+    .aside-menu{
+        display: block;
+    }
+}
+
